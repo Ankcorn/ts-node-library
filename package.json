@@ -1,6 +1,6 @@
 {
 	"name": "ts-node-library",
-	"version": "0.1.1-beta.0",
+	"version": "0.1.1-beta.1",
 	"type": "module",
 	"description": "A template for typescript node.js libraries powered by tsup, release-it and github actions",
 	"main": "dist/index.mjs",
@@ -14,7 +14,11 @@
 		"typecheck": "tsc --noEmit",
 		"prepare": "husky"
 	},
-	"keywords": ["Library Template", "TSUP", "RELEASE IT"],
+	"keywords": [
+		"Library Template",
+		"TSUP",
+		"RELEASE IT"
+	],
 	"author": "Thomas Ankcorn",
 	"license": "MIT",
 	"devDependencies": {
