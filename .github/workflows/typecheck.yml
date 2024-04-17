@@ -1,5 +1,5 @@
 name: ʦ Typecheck
-on: [push]
+on: [push, workflow_call]
 jobs:
   typecheck:
     name: ʦ Typecheck

@@ -1,5 +1,5 @@
 name: 🔬 Lint
-on: [push]
+on: [push, workflow_call]
 jobs:
   lint:
     name: "🔬 Lint"
