@@ -6,15 +6,14 @@ on:
 jobs:
     lint:
         uses: ankcorn/ts-node-library/.github/workflows/lint.yml
-    test:
-        uses: ankcorn/ts-node-library/.github/workflows/test.yml
+    # test:
+    #     uses: ankcorn/ts-node-library/.github/workflows/test.yml
     typecheck:
         uses: ankcorn/ts-node-library/.github/workflows/test.yml
     publish:
         runs-on: ubuntu-latest
         needs:
             - lint
-            - test
             - typecheck
 
         if: ${{ (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev') && github.event_name == 'push' && contains(github.ref, 'refs/tags/') }}
