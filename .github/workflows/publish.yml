@@ -38,6 +38,6 @@ jobs:
             - name: 🔨 Build package
               run: pnpm build
             - name: 🚀 Publish to NPM
-              run: pnpm publish
+              run: pnpm release --no-git-checks
               env:
                 NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

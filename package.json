@@ -4,6 +4,11 @@
 	"type": "module",
 	"description": "A template for typescript node.js libraries powered by tsup, release-it and github actions",
 	"main": "dist/index.mjs",
+	"readme": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ankcorn/ts-node-library.git"
+	},
 	"scripts": {
 		"build": "tsup",
 		"coverage": "vitest run --coverage",
@@ -12,7 +17,8 @@
 		"release": "release-it",
 		"test": "vitest",
 		"typecheck": "tsc --noEmit",
-		"prepare": "husky"
+		"prepare": "husky",
+		"prerelease": "pnpm build && pnpm release-it --preRelease=beta --no-git-checks"
 	},
 	"keywords": ["Library Template", "TSUP", "RELEASE IT"],
 	"author": "Thomas Ankcorn",
