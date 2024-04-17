@@ -1,6 +1,6 @@
 {
 	"name": "ts-node-library",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"type": "module",
 	"description": "A template for typescript node.js libraries powered by tsup, release-it and github actions",
 	"main": "dist/index.mjs",
