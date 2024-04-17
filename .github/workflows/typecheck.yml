@@ -1,18 +1,17 @@
 name: ʦ Typecheck
-on:
-  push:
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
     - name: ⬇️ Checkout repo
       uses: actions/checkout@v4
-    - name: ⎔ Setup Node.JS ${{ matrix.node-version }}
-          uses: actions/setup-node@v3
-          with:
-            node-version: ${{ matrix.node-version }}
-            cache: 'pnpm'
-        - name: 📥 Install deps
-          run: pnpm install
-        - name: 🔎 Type Check
-          run: pnpm typecheck
+    - name: ⎔ Setup Node.JS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+        cache: 'pnpm'
+    - name: 📥 Install deps
+      run: pnpm install
+    - name: 🔎 Type Check
+      run: pnpm typecheck
