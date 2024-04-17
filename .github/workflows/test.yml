@@ -9,6 +9,10 @@ jobs:
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
+      - name: 🐣 Install Pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: ⎔ Setup Node.JS ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
