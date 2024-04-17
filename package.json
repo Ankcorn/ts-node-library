@@ -1,22 +1,30 @@
 {
-  "name": "ts-node-library",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "A template for typescript node.js libraries powered by tsup, release-it and github actions",
-  "main": "dist/index.mjs",
-
-  "scripts": {
-    "build": "tsup",
-    "test": "vitest",
-    "release": "release-it"
-  },
-  "keywords": ["Library Template", "TSUP", "RELEASE IT"],
-  "author": "Thomas Ankcorn",
-  "license": "MIT",
-  "devDependencies": {
-    "release-it": "^17.2.0",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5",
-    "vitest": "^1.5.0"
-  }
+	"name": "ts-node-library",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "A template for typescript node.js libraries powered by tsup, release-it and github actions",
+	"main": "dist/index.mjs",
+	"scripts": {
+		"build": "tsup",
+		"coverage": "vitest run --coverage",
+		"lint": "biome check --apply .",
+		"format": "biome format --write .",
+		"release": "release-it",
+		"test": "vitest",
+		"typecheck": "tsc --noEmit",
+		"prepare": "husky"
+	},
+	"keywords": ["Library Template", "TSUP", "RELEASE IT"],
+	"author": "Thomas Ankcorn",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "1.7.0",
+		"@types/node": "^20.12.7",
+		"@vitest/coverage-v8": "^1.5.0",
+		"husky": "^9.0.11",
+		"release-it": "^17.2.0",
+		"tsup": "^8.0.2",
+		"typescript": "^5.4.5",
+		"vitest": "^1.5.0"
+	}
 }
