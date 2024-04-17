@@ -2,4 +2,4 @@ name: ʦ Typecheck
 on: [push]
 jobs:
   typecheck:
-    uses: ./.github/actions/typecheck.yml
+    uses: ./.github/actions/typecheck

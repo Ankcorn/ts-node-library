@@ -2,4 +2,4 @@ name: 🔬 Lint
 on: [push]
 jobs:
   lint:
-    uses: ./.github/actions/lint.yml
+    uses: ./.github/actions/lint

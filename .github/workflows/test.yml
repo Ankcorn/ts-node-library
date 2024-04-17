@@ -2,4 +2,4 @@ name: ⚡️ Test
 on: [push]
 jobs:
   test:
-    uses: ./.github/actions/test.yml
+    uses: ./.github/actions/test
