@@ -5,11 +5,11 @@ on:
         - '*'
 jobs:
     lint:
-        uses: ankcorn/ts-node-library/.github/workflows/lint.yml
-    # test:
-    #     uses: ankcorn/ts-node-library/.github/workflows/test.yml
+        uses: ./.github/workflows/lint
+    test:
+        uses: ./.github/workflows/test
     typecheck:
-        uses: ankcorn/ts-node-library/.github/workflows/typecheck.yml
+        uses: ./.github/workflows/typecheck
     publish:
         runs-on: ubuntu-latest
         needs:
