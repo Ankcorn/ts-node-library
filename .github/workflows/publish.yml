@@ -20,7 +20,7 @@ jobs:
             - typecheck
             - test
 
-        if: ${{ (github.ref == 'refs/heads/main') && github.event_name == 'push' && contains(github.ref, 'refs/tags/') }}
+        if: ${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/') }}
         steps:
             - name: ⬇️ Checkout repo
               uses: actions/checkout@v4
