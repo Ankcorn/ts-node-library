@@ -2,24 +2,4 @@ name: ⚡️ Test
 on: [push]
 jobs:
   test:
-    name: "⚡️ Test"
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ['18.x', '20.x', '21.x']
-    steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v4
-      - name: 🐣 Install Pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-      - name: ⎔ Setup Node.JS ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
-      - name: 📥 Install deps
-        run: pnpm install
-      - name: ⚡️ Run Vitest
-        run: pnpm coverage
+    uses: ./.github/actions/test.yml
