@@ -1,8 +1,9 @@
 name: 🔬 Lint
 on: [push]
 jobs:
-  build:
-    runs-on: ubuntu-20.04
+  lint:
+    name: "🔬 Lint"
+    runs-on: ubuntu-latest
     steps:
     - name: ⬇️ Checkout repo
       uses: actions/checkout@v4
