@@ -9,7 +9,7 @@ jobs:
     # test:
     #     uses: ankcorn/ts-node-library/.github/workflows/test.yml
     typecheck:
-        uses: ankcorn/ts-node-library/.github/workflows/test.yml
+        uses: ankcorn/ts-node-library/.github/workflows/typecheck.yml
     publish:
         runs-on: ubuntu-latest
         needs:
