@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "rootDir": ".",
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "Bundler",
+      "esModuleInterop": true,
+      "strict": true
+    },
+    "exclude": [
+      "dist",
+    ]
+  }
