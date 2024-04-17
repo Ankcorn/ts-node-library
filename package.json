@@ -14,11 +14,7 @@
 		"typecheck": "tsc --noEmit",
 		"prepare": "husky"
 	},
-	"keywords": [
-		"Library Template",
-		"TSUP",
-		"RELEASE IT"
-	],
+	"keywords": ["Library Template", "TSUP", "RELEASE IT"],
 	"author": "Thomas Ankcorn",
 	"license": "MIT",
 	"devDependencies": {
